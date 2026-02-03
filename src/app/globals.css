@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal-primary: #1a5f5f;
+  --color-teal-dark: #0f3d3d;
+  --color-teal-light: #e8f4f4;
+  --color-teal-medium: #d1e7e7;
+  --color-teal-pale: #f0f7f7;
+  --color-teal-whisper: #f8fafa;
+  --color-yellow-accent: #f4d03f;
+  --color-gray-dark: #2d2d2d;
+  --color-gray-medium: #6b7280;
+  --color-gray-light: #f7f7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Logo Carousel Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Mobile: Slower scroll */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+}

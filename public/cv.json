@@ -1,0 +1,231 @@
+{
+    "personalInfo": {
+        "name": "STOMPY MWENDWA",
+        "phone": [
+            "+1 786 414 2226",
+            "+254 740 365 522"
+        ],
+        "email": "mwendwa.stompy@gmail.com",
+        "address": "San Francisco, California, United States",
+        "linkedin": "Stompy-Mwendwa"
+    },
+    "professionalSummary": "Senior DevOps Engineer with over 7 years of experience architecting and scaling cloud infrastructure for enterprise SaaS platforms across EMEA, the US, and APAC markets. Expert in Kubernetes orchestration and CI/CD automation, focusing on bridging the gap between development and operations to enhance platform reliability and system uptime. Orchestrated high-severity incident responses and infrastructure optimizations that reduced downtime by 35% while supporting global AI-powered developer tooling. Seeking to apply expertise in infrastructure automation and platform reliability to a Lead DevOps or Site Reliability Engineering role requiring proven success in managing distributed global environments and high-growth cloud architectures.",
+    "skills": [
+        "Cloud Infrastructure",
+        "Kubernetes Administration",
+        "Container Orchestration",
+        "Infrastructure Automation",
+        "Pipeline Optimization",
+        "Release Engineering",
+        "Incident Response",
+        "Platform Reliability",
+        "System Observability",
+        "Terraform Provisioning",
+        "Docker Containerization",
+        "Configuration Management",
+        "Continuous Integration",
+        "Continuous Deployment",
+        "Monitoring Frameworks",
+        "Scripting Automation",
+        "Database Management",
+        "Security Compliance",
+        "Disaster Recovery",
+        "Load Balancing",
+        "Serverless Computing",
+        "Log Management",
+        "Microservices Architecture",
+        "API Integration",
+        "Network Security",
+        "Cloud Migration",
+        "Technical Support",
+        "Agile Methodologies",
+        "Version Control",
+        "Workflow Automation"
+    ],
+    "experience": [
+        {
+            "title": "Senior Application Engineer & Team Lead (DevOps & Platform Support)",
+            "company": "Sourcegraph",
+            "logo": "/logos/sourcegraph.jpg",
+            "location": "San Francisco/Nairobi",
+            "period": "Mar 2021 – Present",
+            "responsibilities": [
+                "Orchestrated global platform operations across three continents using asynchronous workflows and distributed team management to support enterprise AI-powered code search tools.",
+                "Reduced incident resolution time by 34% through the implementation of automated root cause analysis workflows and enhanced Prometheus-based monitoring systems.",
+                "Engineered automated operational tooling that accelerated customer-facing response times by 31% while maintaining 99.9% service availability for global SaaS customers.",
+                "Partnered with core SRE teams to deploy infrastructure optimizations and strengthen system observability across complex Kubernetes-based enterprise environments.",
+                "Directed 62% of high-severity production incidents within a follow-the-sun support model, ensuring rapid recovery and minimal business disruption.",
+                "Standardized 15+ operational playbooks and troubleshooting frameworks, which decreased recurring platform incidents across the global infrastructure.",
+                "Mentored a technical team of engineers to reduce new hire ramp-up time through structured onboarding and technical enablement programs."
+            ]
+        },
+        {
+            "title": "Customer Success Manager (Technical SaaS & Platform Integrations)",
+            "company": "IQVIA",
+            "logo": "/logos/iqvia.jpg",
+            "location": "EMEA",
+            "period": "Dec 2019 – Feb 2021",
+            "responsibilities": [
+                "Led technical onboarding for enterprise SaaS solutions across EMEA, driving a 33% revenue increase for a nascent product line through deployment efficiency.",
+                "Integrated SaaS platforms with complex customer APIs and environments for 20+ enterprise clients, securing $6M in annual contract value.",
+                "Decreased customer churn from 8% to under 3% by deploying proactive health monitoring systems and technical success checkpoints.",
+                "Optimized CRM adoption workflows to convert new enterprise deployments into $300K in recurring annual revenue through improved system utilization tracking.",
+                "Managed cross-functional troubleshooting for data pipelines and API performance across distributed EMEA teams using virtual collaboration platforms.",
+                "Developed comprehensive deployment documentation and technical enablement sessions that reduced inbound support requests via customer self-service.",
+                "Served as the primary technical escalation point, coordinating resolution strategies between global customers and internal engineering teams for critical integration issues."
+            ]
+        },
+        {
+            "title": "Product Manager (Technical Platform & Data Products)",
+            "company": "IQVIA",
+            "logo": "/logos/iqvia.jpg",
+            "location": "Nairobi, Kenya",
+            "period": "Mar 2019 – Dec 2019",
+            "responsibilities": [
+                "Launched enterprise data platforms serving pharmaceutical clients in four African markets, achieving a 77% adoption rate during the initial rollout phase.",
+                "Built Python-based automation scripts to process over 1M records, enhancing internal data processing efficiency by 54% compared to manual methods.",
+                "Introduced agile development methodologies and sprint cycles that accelerated product delivery timelines for key platform features.",
+                "Collaborated with engineering departments to streamline deployment workflows and increase the frequency of release cycles for technical data products.",
+                "Facilitated remote product requirement workshops with stakeholders across African markets to align development priorities with local market needs."
+            ]
+        },
+        {
+            "title": "Technical Advisor, Government Cloud Delivery",
+            "company": "ICT Authority (Government Digital Transformation Program)",
+            "logo": "/logos/ict-authority.jpg",
+            "location": "Nairobi, Kenya",
+            "period": "Jun 2018 – Feb 2019",
+            "responsibilities": [
+                "Led the cloud migration of seven national government platforms to Microsoft Azure, maintaining 99.99% uptime throughout the infrastructure transition.",
+                "Designed deployment strategies for cloud-based SaaS solutions that reduced land approval processing times by 80% and lowered fraud rates by 47%.",
+                "Managed a $2M infrastructure program, ensuring all cloud delivery initiatives remained within budget and met stringent government performance criteria.",
+                "Established standardized documentation and system support frameworks that decreased recurring platform incidents across the national digital estate.",
+                "Coordinated multi-stakeholder technical teams across various government departments using virtual project management tools to ensure delivery alignment."
+            ]
+        },
+        {
+            "title": "Digital Innovation Evangelist",
+            "company": "Cytonn Investments",
+            "logo": "/logos/cytonn.jpg",
+            "location": "Washington DC-Baltimore Area",
+            "period": "Mar 2018 – Jun 2018",
+            "responsibilities": [
+                "Overhauled obsolete corporate silos by leading cross-departmental innovation sprints, resulting in a 60% increase in innovative ideation across the organization.",
+                "Piloted and launched a concept SaaS product roadmap for a financial merry-go-round application, successfully translating stakeholder requirements into a functional developer-ready blueprint.",
+                "Catalyzed the development of an internal seed fund and innovation strategy, contributing to a 35% increase in corporate startups led by trained employees.",
+                "Reduced employee attrition by 10% within first 90 days by implementing collaborative sprints that increased internal visibility and professional fulfillment for staff."
+            ]
+        },
+        {
+            "title": "Technology Specialist",
+            "company": "Agriculture and Food Authority - Sugar Directorate",
+            "logo": "/logos/sugar-directorate.jpg",
+            "location": "Nairobi, Kenya",
+            "period": "Jan 2016 – Feb 2018",
+            "responsibilities": [
+                "Implemented advanced security protocols and perimeter defenses that resulted in a 15% decrease in ransomware attacks and unauthorized access attempts.",
+                "Restructured the entire campus-wide network architecture, significantly increasing the IP address pool and improving overall system connectivity for all departments.",
+                "Commissioned and validated the organization's primary backup protocols and disaster recovery frameworks, ensuring 24/7 data availability for critical records.",
+                "Successfully launched and served as the primary technical lead for the enterprise Microsoft Dynamics NAV rollout, streamlining the directorate's internal resource planning."
+            ]
+        },
+        {
+            "title": "Customer Success Specialist",
+            "company": "World Agroforestry",
+            "logo": "/logos/world-agroforestry.jpg",
+            "location": "Nairobi, Kenya",
+            "period": "2015 – Dec 2015",
+            "responsibilities": [
+                "Authored and standardized a comprehensive suite of process reference manuals for user training, which became the cornerstone of the new-hire orientation program.",
+                "Streamlined technical support management through Zendesk, achieving higher resolution rates by categorizing and prioritizing global incident trends.",
+                "Developed and implemented the organization's first formalized incident response procedures, reducing the time from detection to resolution for critical system outages.",
+                "Coordinated with data teams to assist in BI development activities, leveraging support tickets to identify and fix recurring system bottlenecks."
+            ]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "East African Portland Cement PLC",
+            "logo": "/logos/eapc.jpg",
+            "location": "Nairobi, Kenya",
+            "period": "Mar 2014 – Jul 2014",
+            "responsibilities": [
+                "Designed, programmed, and successfully rolled out a company-wide intranet portal that served as the primary internal communication hub.",
+                "Initiated and executed a massive data archival exercise, improving database performance and cleaning legacy records for the enterprise system.",
+                "Guided and facilitated User Acceptance Training (UAT) sessions for the Microsoft Dynamics NAV rollout, ensuring high adoption rates among non-technical staff.",
+                "Coordinated the development of business intelligence modules to help department heads visualize production and inventory data."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science (Informatics)",
+            "institution": "Strathmore University"
+        },
+        {
+            "degree": "Diploma in Business & Information Technology",
+            "institution": "Strathmore University"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Certified Kubernetes Administrator (CKA)",
+            "issuer": "Cloud Native Computing Foundation"
+        },
+        {
+            "name": "Google Cloud Associate Engineer",
+            "issuer": "Google Cloud"
+        },
+        {
+            "name": "AWS Cloud Practitioner",
+            "issuer": "Amazon Web Services"
+        },
+        {
+            "name": "Microsoft Azure Fundamentals",
+            "issuer": "Microsoft"
+        }
+    ],
+    "tools": [
+        "Google Workspace",
+        "Microsoft Office",
+        "Microsoft Teams",
+        "AWS",
+        "Azure",
+        "Google Cloud Platform (GCP)",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "GitHub Actions",
+        "Buildkite",
+        "Ansible",
+        "Grafana",
+        "Prometheus",
+        "Sentry",
+        "Python",
+        "Bash",
+        "Go",
+        "TypeScript",
+        "JavaScript",
+        "PostgreSQL",
+        "SQL",
+        "Git",
+        "GitLab",
+        "VS Code",
+        "JetBrains IDEs",
+        "Slack",
+        "Zoom"
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiency": "Fluent"
+        },
+        {
+            "language": "Swahili",
+            "proficiency": "Native"
+        },
+        {
+            "language": "Spanish",
+            "proficiency": "Basic"
+        }
+    ]
+}
