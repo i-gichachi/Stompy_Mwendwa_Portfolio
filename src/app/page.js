@@ -90,10 +90,10 @@ export default function Home() {
       </nav>
 
       {/* STEP 3 & FIX 1: HERO SECTION (Final Refined Version) */}
-      <section className="bg-teal-primary min-h-screen flex items-center py-20 px-6 lg:px-12">
+      <section className="bg-teal-primary min-h-screen flex items-center pt-8 pb-20 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto w-full">
 
-          <div className="grid grid-cols-1 lg:grid-cols-[35%_30%_35%] gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[33%_25%_42%] gap-8 items-center">
 
             {/* LEFT COLUMN - Text Content */}
             <div className="text-left order-2 lg:order-1">
@@ -113,17 +113,17 @@ export default function Home() {
 
               {/* CTA Buttons - AUTO WIDTH */}
               <div className="flex flex-col gap-4">
-                <button className="bg-yellow-accent text-gray-dark px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-transform">
+                <button className="bg-yellow-accent text-gray-dark px-5 py-2.5 rounded-lg font-semibold hover:scale-105 transition-transform text-sm lg:text-base">
                   Schedule a Call
                 </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-primary transition-colors">
+                <button className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white hover:text-teal-primary transition-colors text-sm lg:text-base">
                   View Portfolio →
                 </button>
               </div>
             </div>
 
             {/* CENTER COLUMN - Profile Image - PORTRAIT */}
-            <div className="flex justify-center order-1 lg:order-2">
+            <div className="flex justify-center lg:justify-start lg:pl-4 order-1 lg:order-2">
               <div className="relative w-[260px] h-[320px] lg:w-[320px] lg:h-[400px]">
                 <div className="absolute inset-0 rounded-2xl bg-yellow-accent transform translate-y-4"></div>
 
@@ -135,12 +135,6 @@ export default function Home() {
                     className="object-cover"
                     priority
                   />
-                </div>
-
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-lg">
-                  <p className="text-sm font-semibold text-teal-primary whitespace-nowrap">
-                    Senior DevOps Engineer
-                  </p>
                 </div>
               </div>
             </div>
