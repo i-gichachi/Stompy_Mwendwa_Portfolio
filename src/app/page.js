@@ -90,92 +90,104 @@ export default function Home() {
       </nav>
 
       {/* STEP 3 & FIX 1: HERO SECTION (Final Refined Version) */}
-      <section className="bg-teal-primary min-h-screen flex items-center pt-8 pb-20 px-6 lg:px-12">
-        <div className="max-w-[1400px] mx-auto w-full">
+      {/* STEP 3 & FIX 1: HERO SECTION - V2 REDESIGN (MAXIMUM IMPACT) */}
+      <section className="relative bg-teal-primary py-12 lg:py-16 px-6 lg:px-12" aria-label="Hero section">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 min-h-[550px] lg:min-h-[600px] items-center">
 
-          <div className="grid grid-cols-1 lg:grid-cols-[33%_25%_42%] gap-8 items-center">
+            {/* LEFT COLUMN - TEXT CONTENT */}
+            <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:pr-8">
 
-            {/* LEFT COLUMN - Text Content */}
-            <div className="text-left order-2 lg:order-1">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white uppercase mb-4 leading-tight">
+              {/* Name - Slightly reduced to prevent overlap */}
+              <h1 className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-white leading-[0.9] mb-4 animate-fade-in-up">
                 {branding.name}
               </h1>
 
-              <div className="w-20 h-1.5 bg-yellow-accent mb-6"></div>
-
-              <h2 className="text-lg lg:text-xl font-medium text-white mb-4">
+              {/* Role */}
+              <h2 className="text-xl lg:text-2xl font-bold text-white leading-tight mb-6 animate-fade-in-up delay-100">
                 {branding.roleTitle}
               </h2>
 
-              <p className="text-sm lg:text-base font-light text-white leading-relaxed mb-8">
+              {/* Tagline */}
+              <p className="text-base lg:text-lg font-normal text-white/80 leading-relaxed max-w-lg mb-8 animate-fade-in-up delay-200">
                 {branding.tagline}
               </p>
 
-              {/* CTA Buttons - AUTO WIDTH */}
-              <div className="flex flex-col gap-4">
-                <button className="bg-yellow-accent text-gray-dark px-5 py-2.5 rounded-lg font-semibold hover:scale-105 transition-transform text-sm lg:text-base">
-                  Schedule a Call
+              {/* CTA Buttons - Professional & Tight */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up delay-300">
+                <button className="bg-yellow-accent hover:bg-yellow-500 text-teal-primary font-bold text-sm lg:text-base px-8 py-3.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-4 focus:ring-yellow-accent/50 focus:outline-none w-full sm:w-auto">
+                  Schedule Call
                 </button>
-                <button className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white hover:text-teal-primary transition-colors text-sm lg:text-base">
-                  View Portfolio →
+                <button className="border border-white/40 hover:border-white bg-transparent hover:bg-white/10 text-white font-semibold text-sm lg:text-base px-8 py-3.5 rounded-lg transition-all duration-300 focus:ring-4 focus:ring-white/50 focus:outline-none w-full sm:w-auto">
+                  View Portfolio
                 </button>
               </div>
             </div>
 
-            {/* CENTER COLUMN - Profile Image - PORTRAIT */}
-            <div className="flex justify-center lg:justify-start lg:pl-4 order-1 lg:order-2">
-              <div className="relative w-[260px] h-[320px] lg:w-[320px] lg:h-[400px]">
-                <div className="absolute inset-0 rounded-2xl bg-yellow-accent transform translate-y-4"></div>
+            {/* CENTER COLUMN - PROFILE IMAGE (RECTANGULAR) */}
+            <div className="flex items-center justify-center lg:px-4">
+              <div className="relative w-[300px] lg:w-[320px] h-[450px] lg:h-[500px] mx-auto group">
+                {/* Yellow Shadow */}
+                <div className="absolute inset-0 translate-x-6 translate-y-6 bg-yellow-accent rounded-3xl opacity-90 -z-10 transition-transform duration-300 group-hover:translate-x-7 group-hover:translate-y-7"></div>
 
-                <div className="relative w-full h-full rounded-2xl overflow-hidden ring-8 ring-white shadow-2xl bg-gray-200">
+                {/* Image Container - Rectangular & Rounded */}
+                <div className="relative w-full h-full rounded-3xl overflow-hidden ring-8 ring-white z-10 transition-transform duration-300 group-hover:-translate-y-1 group-hover:-translate-x-1">
                   <Image
-                    src="/images/profile.jpg"
-                    alt="Stompy Mwendwa"
+                    src={branding.profileImage}
+                    alt={`${branding.name} - ${branding.roleTitle}`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
+                    quality={95}
+                    sizes="(max-width: 768px) 300px, 320px"
                   />
                 </div>
               </div>
             </div>
 
-            {/* RIGHT COLUMN - Metrics & Tech - COMPACT */}
-            <div className="order-3 pr-0 lg:pr-8">
-
-              {/* Metrics Grid - SMALLER */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                {branding.keyMetrics.map((metric, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/10 border border-white/20 rounded-lg p-3 backdrop-blur-sm"
-                  >
-                    <div className="text-2xl lg:text-3xl font-bold text-white mb-1">
-                      {metric.value}
-                    </div>
-                    <div className="text-[10px] text-white/80 uppercase tracking-wide leading-tight">
-                      {metric.label}
-                    </div>
+            {/* RIGHT COLUMN - METRICS (Single Column Stack) */}
+            <div className="w-full lg:pl-12">
+              <div className="grid grid-cols-1 gap-4">
+                {/* Metric 1 - Years Experience */}
+                <div className="bg-teal-dark/30 rounded-xl p-6 flex flex-col justify-center border border-white/10 hover:bg-teal-dark/40 transition-all duration-300">
+                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                    7+
                   </div>
-                ))}
-              </div>
+                  <div className="text-xs font-medium text-white/70 uppercase tracking-wider">
+                    Years Experience
+                  </div>
+                </div>
 
-              {/* Technology Expertise - SMALLER */}
-              <div>
-                <h3 className="text-xs font-semibold text-white/90 mb-2 uppercase tracking-wide">
-                  Technology Expertise
-                </h3>
-                <div className="grid grid-cols-3 lg:grid-cols-4 gap-1.5">
-                  {branding.technologies.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="bg-white/10 border border-white/20 rounded px-2 py-1.5 text-[10px] text-white text-center hover:bg-white/20 transition-colors"
-                    >
-                      {tech}
-                    </div>
-                  ))}
+                {/* Metric 2 - Incident Resolution */}
+                <div className="bg-teal-dark/30 rounded-xl p-6 flex flex-col justify-center border border-white/10 hover:bg-teal-dark/40 transition-all duration-300">
+                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                    34%
+                  </div>
+                  <div className="text-xs font-medium text-white/70 uppercase tracking-wider">
+                    Incident Resolution Improvement
+                  </div>
+                </div>
+
+                {/* Metric 3 - Service Availability */}
+                <div className="bg-teal-dark/30 rounded-xl p-6 flex flex-col justify-center border border-white/10 hover:bg-teal-dark/40 transition-all duration-300">
+                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                    99.9%
+                  </div>
+                  <div className="text-xs font-medium text-white/70 uppercase tracking-wider">
+                    Service Availability
+                  </div>
+                </div>
+
+                {/* Metric 4 - Contract Value */}
+                <div className="bg-teal-dark/30 rounded-xl p-6 flex flex-col justify-center border border-white/10 hover:bg-teal-dark/40 transition-all duration-300">
+                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                    $6M
+                  </div>
+                  <div className="text-xs font-medium text-white/70 uppercase tracking-wider">
+                    Contract Value Secured
+                  </div>
                 </div>
               </div>
-
             </div>
 
           </div>
@@ -183,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* STEP 4 & FIX 2: LOGO CAROUSEL (Transparent Containers, Full Clarity, No Opacity) */}
-      <section className="bg-teal-whisper py-16 px-6">
+      <section className="bg-teal-whisper py-10 px-6">
         <div className="max-w-[1400px] mx-auto">
 
           {/* Heading */}

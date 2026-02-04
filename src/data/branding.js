@@ -1,6 +1,7 @@
 export const branding = {
     name: "Stompy Mwendwa",
     roleTitle: "Senior DevOps & Platform Reliability Engineer",
+    profileImage: "/images/profile.jpg",
     tagline: "Architecting resilient cloud infrastructure for global enterprise platforms",
     contact: {
         phone: ["+1 786 414 2226", "+254 740 365 522"],
