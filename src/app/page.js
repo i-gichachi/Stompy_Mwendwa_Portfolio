@@ -162,13 +162,16 @@ export default function Home() {
               {/* REFINED CTA BUTTONS - EXPANDED */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {/* Primary CTA with shine effect */}
-                <button className="group relative bg-yellow-accent text-gray-900 px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-yellow-accent/20 hover:-translate-y-0.5 hover:scale-[1.02] w-full flex items-center justify-center">
+                <Link
+                  href="/about"
+                  className="group relative bg-yellow-accent text-gray-900 px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-yellow-accent/20 hover:-translate-y-0.5 hover:scale-[1.02] w-full flex items-center justify-center"
+                >
                   <span className="relative z-10 flex items-center gap-2">
-                    Schedule Call
+                    About Me
                   </span>
                   {/* Shine animation on hover */}
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
-                </button>
+                </Link>
 
                 {/* Secondary CTA */}
                 <button className="relative bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold border border-white/30 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-0.5 w-full flex items-center justify-center">
