@@ -180,7 +180,7 @@ export default function About() {
                                                     {role.responsibilities.slice(0, expandedRoles[index] ? undefined : 3).map((item, i) => (
                                                         <div key={i} className="flex items-start gap-3">
                                                             <span className="text-teal-primary font-bold text-base mt-0.5 flex-shrink-0">●</span>
-                                                            <span className="text-sm text-gray-800 font-medium leading-snug">
+                                                            <span className="text-base text-gray-800 font-medium leading-relaxed">
                                                                 {item}
                                                             </span>
                                                         </div>
