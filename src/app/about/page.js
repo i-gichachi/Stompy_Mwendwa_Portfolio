@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { MapPin, Calendar, ChevronDown, CheckCircle } from 'lucide-react';
+import { MapPin, Calendar, ChevronDown, CheckCircle, Cloud, TrendingUp, Globe, Download } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
@@ -21,8 +21,85 @@ export default function About() {
         <main className="font-sans text-gray-dark bg-white">
             <Navigation />
 
+            {/* CAREER SNAPSHOT SECTION - MOVED TO HERO POSITION */}
+            <section className="bg-white relative py-12 lg:py-16 pt-28 lg:pt-36">
+                <div className="max-w-[1400px] mx-auto px-6">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="relative bg-yellow-accent/10 border-l-4 border-yellow-accent rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow duration-300">
+
+                            {/* Label */}
+                            <p className="text-xs font-bold text-teal-primary uppercase tracking-wider mb-3">
+                                CAREER SNAPSHOT
+                            </p>
+
+                            {/* Headline */}
+                            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                                7 Years Building Resilient Infrastructure at Enterprise Scale
+                            </h2>
+
+                            {/* Summary */}
+                            <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
+                                Senior DevOps Engineer with proven expertise leading platform reliability across global SaaS companies. Reduced incident resolution by 34% at Sourcegraph through automated monitoring systems, secured $6M in enterprise contracts at IQVIA via complex API integrations, and led government cloud migrations maintaining 99.99% uptime. Specialized in Kubernetes orchestration, multi-cloud architecture (AWS/Azure/GCP), and distributed team leadership across three continents.
+                            </p>
+
+                            {/* Key Highlights Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                {/* Item 1 */}
+                                <div>
+                                    <div className="w-10 h-10 bg-teal-primary/10 rounded-lg flex items-center justify-center mb-2">
+                                        <Cloud className="w-5 h-5 text-teal-primary" />
+                                    </div>
+                                    <p className="text-xs font-semibold text-teal-primary uppercase tracking-wide">
+                                        YEARS EXPERIENCE
+                                    </p>
+                                    <p className="text-xl lg:text-2xl font-bold text-gray-900">
+                                        7+
+                                    </p>
+                                </div>
+
+                                {/* Item 2 */}
+                                <div>
+                                    <div className="w-10 h-10 bg-teal-primary/10 rounded-lg flex items-center justify-center mb-2">
+                                        <TrendingUp className="w-5 h-5 text-teal-primary" />
+                                    </div>
+                                    <p className="text-xs font-semibold text-teal-primary uppercase tracking-wide">
+                                        INCIDENT REDUCTION
+                                    </p>
+                                    <p className="text-xl lg:text-2xl font-bold text-gray-900">
+                                        34%
+                                    </p>
+                                </div>
+
+                                {/* Item 3 */}
+                                <div>
+                                    <div className="w-10 h-10 bg-teal-primary/10 rounded-lg flex items-center justify-center mb-2">
+                                        <Globe className="w-5 h-5 text-teal-primary" />
+                                    </div>
+                                    <p className="text-xs font-semibold text-teal-primary uppercase tracking-wide">
+                                        GLOBAL OPERATIONS
+                                    </p>
+                                    <p className="text-xl lg:text-2xl font-bold text-gray-900">
+                                        3 Continents
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Download Resume Button */}
+                            <a
+                                href="/resume.pdf"
+                                className="inline-flex items-center gap-2 bg-teal-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg mt-2"
+                                aria-label="Download Stompy Mwendwa's resume as PDF"
+                            >
+                                <Download className="w-5 h-5" />
+                                <span>Download Full Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* SECTION 1: PROFESSIONAL EXPERIENCE TIMELINE */}
-            <section className="bg-teal-mid relative py-12 lg:py-24 overflow-hidden pt-28 lg:pt-36">
+            <section className="bg-teal-mid relative py-12 lg:py-24 overflow-hidden">
 
                 {/* Dot Pattern Overlay */}
                 <div className="absolute inset-0 opacity-40 pointer-events-none">
