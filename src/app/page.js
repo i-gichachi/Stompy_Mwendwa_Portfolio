@@ -525,7 +525,7 @@ export default function Home() {
                   {/* Enhanced CTA Button */}
                   <div className="flex items-center justify-between">
                     <Link
-                      href={`/portfolio/${study.slug}`}
+                      href={`/portfolio?id=${study.id}`}
                       className="group/link inline-flex items-center gap-3 bg-teal-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-dark transition-all duration-300 hover:gap-4 hover:shadow-lg"
                     >
                       <span>Read Full Case Study</span>
