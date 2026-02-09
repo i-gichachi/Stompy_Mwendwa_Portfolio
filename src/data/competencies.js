@@ -22,7 +22,7 @@ export const competencies = [
     {
         id: 5,
         title: "Enterprise SaaS Integration & Technical Client Success",
-        description: `Bridging the gap between complex technical platforms and enterprise customer needs means ensuring successful deployments that actually drive revenue growth. At IQVIA, integrating SaaS platforms with complex customer APIs and environments for over 20 enterprise clients across EMEA secured $6M in annual contract value through seamless technical onboarding. The proactive approach included deploying health monitoring systems and technical checkpoints that dropped customer churn from 8% to under 3%, proving that strong technical partnership directly impacts retention and revenue.`
+        description: `Bridging the gap between complex technical platforms and enterprise customer needs means ensuring successful deployments that actually drive revenue growth. At IQVIA, integrating SaaS platforms with complex customer APIs and environments for over 20 enterprise clients across EMEA secured $10M in annual contract value through seamless technical onboarding. The proactive approach included deploying health monitoring systems and technical checkpoints that dropped customer churn from 8% to under 3%, proving that strong technical partnership directly impacts retention and revenue.`
     },
     {
         id: 6,

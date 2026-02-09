@@ -53,7 +53,7 @@ export default function Expertise() {
         ],
         // Competency 5: Enterprise SaaS
         [
-            "$6M in annual contract value secured",
+            "$10M in annual contract value secured",
             "Customer churn decreased from 8% to under 3%",
             "20+ enterprise clients across EMEA successfully integrated"
         ],

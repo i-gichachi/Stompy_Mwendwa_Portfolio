@@ -12,7 +12,7 @@ export const services = [
     {
         id: 2,
         title: "AI-Powered GARP Investment Engine",
-        summary: "Need consistent alpha generation while protecting downside risk? I provide institutions and funds with AI-driven investment infrastructure that delivers instant exposure to global assets, capitalizing on market volatility to generate superior returns on excess capital. Built on enterprise-grade cloud architecture and data-driven decision-making frameworks refined through managing $2M+ infrastructure programs and securing $6M in enterprise contracts.",
+        summary: "Generate consistent alpha while protecting downside through AI-driven GARP. Instant exposure to global assets with volatility-optimized returns, built on cloud architecture managing $1M+ worth of assets.",
         bestFor: "Institutional investors, hedge funds and asset managers seeking algorithmic alpha generation",
         timeframe: "12-month annual engagement",
         investment: "2% AUM",

@@ -1,7 +1,7 @@
 export const branding = {
     name: "Stompy Mwendwa",
-    roleTitle: "Senior DevOps & Platform Reliability Engineer",
-    profileImage: "/images/profile.jpg",
+    roleTitle: "Engineering Manager & Senior DevOps/SRE Engineer",
+    profileImage: "/images/hero-profile.jpg",
     tagline: "Architecting resilient cloud infrastructure for global enterprise platforms",
     contact: {
         phone: ["+1 786 414 2226", "+254 740 365 522"],
@@ -13,7 +13,7 @@ export const branding = {
         { label: "Years Experience", value: "7+" },
         { label: "Incident Resolution Improvement", value: "34%" },
         { label: "Service Availability", value: "99.9%" },
-        { label: "Contract Value Secured", value: "$6M" },
+        { label: "Contract Value Secured", value: "$10M" },
         { label: "Global Operations", value: "3 Continents" },
         { label: "Enterprise Clients", value: "20+" }
     ],

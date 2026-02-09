@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -11,10 +11,55 @@ import { branding } from '@/data/branding';
 import { competencies } from '@/data/competencies';
 import { caseStudies } from '@/data/caseStudies';
 import { services } from '@/data/services';
+import { slackTestimonials } from '@/data/testimonials';
+import ScreenshotCard from '@/components/ScreenshotCard';
+import ZoomModal from '@/components/ZoomModal';
 import BackToTop from '@/components/BackToTop';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+
+  const openModal = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedTestimonial(null);
+  };
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId;
+
+    const scroll = () => {
+      if (!isPaused) {
+        // Higher speed on mobile (width < 768px), slower on desktop
+        const isMobile = window.innerWidth < 768;
+        const speed = isMobile ? 1.5 : 0.5; // Increased mobile speed significantly
+
+        scrollContainer.scrollLeft += speed;
+
+        // Reset when we've scrolled past the first set (roughly half content)
+        // We use scrollWidth / 2 as approximation since we duplicated the content
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
 
   return (
     <main className="pt-20 relative font-sans text-gray-dark">
@@ -192,17 +237,6 @@ export default function Home() {
                 {/* Main capsule container - Taller aspect ratio to match content */}
                 <div className="relative w-full aspect-[2/3] rounded-[190px] overflow-hidden border-4 border-white/20 bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl">
 
-                  {/* Placeholder content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-7xl font-black text-white/50 mb-3 tracking-tight">SM</p>
-                      <p className="text-sm font-medium text-white/40 uppercase tracking-wider">Profile Photo</p>
-                      <p className="text-xs text-white/25 mt-2">3:4 Portrait Required</p>
-                    </div>
-                  </div>
-
-                  {/* When real image exists */}
-                  {/* 
                   <Image
                     src={branding.profileImage}
                     alt={`${branding.name} - ${branding.roleTitle}`}
@@ -210,7 +244,6 @@ export default function Home() {
                     className="object-cover"
                     priority
                   />
-                  */}
                 </div>
               </div>
             </div>
@@ -233,7 +266,14 @@ export default function Home() {
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
 
             {/* Scrolling track */}
-            <div className="flex gap-16 animate-scroll hover:[animation-play-state:paused]">
+            <div
+              ref={scrollRef}
+              className="flex gap-16 overflow-x-auto no-scrollbar"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
+            >
               {/* First set of logos */}
               {branding.companies.map((company, index) => (
                 <div key={`first-${index}`} className="flex-shrink-0 flex flex-col items-center gap-3 w-32">
@@ -584,111 +624,18 @@ export default function Home() {
             <div className="w-24 h-1 bg-teal-primary mx-auto"></div>
           </div>
 
-          {/* Testimonial Cards Grid */}
+          {/* Testimonial Cards Grid - Using ScreenshotCard */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* Testimonial Card 1 - Sourcegraph */}
-            <div className="group relative">
-              <div className="relative bg-white rounded-2xl p-8 border border-white/50 shadow-md hover:shadow-xl hover:shadow-teal-primary/10 transition-all duration-300 h-full flex flex-col">
-
-                {/* Quote icon */}
-                <div className="text-teal-primary/20 mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-
-                {/* Quote text */}
-                <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow italic">
-                  "Stompy's technical leadership and platform expertise were instrumental in stabilizing our infrastructure during a critical period. His ability to mentor engineers while delivering automation tools significantly improved our team's efficiency."
-                </p>
-
-                {/* Company logo and attribution */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center p-2 flex-shrink-0">
-                    <Image
-                      src="/logos/sourcegraph.jpg"
-                      alt="Sourcegraph"
-                      width={40}
-                      height={40}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-gray-900 font-semibold text-sm">Engineering Manager</p>
-                    <p className="text-gray-500 text-xs">Sourcegraph</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial Card 2 - IQVIA */}
-            <div className="group relative">
-              <div className="relative bg-white rounded-2xl p-8 border border-white/50 shadow-md hover:shadow-xl hover:shadow-teal-primary/10 transition-all duration-300 h-full flex flex-col">
-
-                <div className="text-teal-primary/20 mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-
-                <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow italic">
-                  "Working with Stompy on enterprise SaaS deployments was exceptional. His technical acumen combined with client-facing skills helped us secure millions in contract value while maintaining high customer satisfaction across the EMEA region."
-                </p>
-
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center p-2 flex-shrink-0">
-                    <Image
-                      src="/logos/iqvia.jpg"
-                      alt="IQVIA"
-                      width={40}
-                      height={40}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-gray-900 font-semibold text-sm">Director of Customer Success</p>
-                    <p className="text-gray-500 text-xs">IQVIA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial Card 3 - ICT Authority */}
-            <div className="group relative">
-              <div className="relative bg-white rounded-2xl p-8 border border-white/50 shadow-md hover:shadow-xl hover:shadow-teal-primary/10 transition-all duration-300 h-full flex flex-col">
-
-                <div className="text-teal-primary/20 mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-
-                <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow italic">
-                  "Stompy led the successful migration of seven national government platforms to Azure cloud infrastructure, achieving 99.99% uptime throughout the transition. His expertise in cloud architecture and stakeholder management was invaluable to our digital transformation program."
-                </p>
-
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center p-2 flex-shrink-0">
-                    <Image
-                      src="/logos/ict-authority.jpg"
-                      alt="ICT Authority"
-                      width={40}
-                      height={40}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-gray-900 font-semibold text-sm">Program Director</p>
-                    <p className="text-gray-500 text-xs">ICT Authority (Kenya Government)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            {slackTestimonials.slice(0, 3).map((testimonial) => (
+              <ScreenshotCard
+                key={testimonial.id}
+                testimonial={testimonial}
+                onClick={openModal}
+              />
+            ))}
           </div>
 
-          {/* Optional: View All Testimonials Button */}
+          {/* View All Testimonials Button */}
           <div className="text-center mt-12">
             <Link
               href="/testimonials"
@@ -704,6 +651,13 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* MODAL FOR TESTIMONIALS */}
+      <ZoomModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        testimonial={selectedTestimonial}
+      />
 
       {/* STEP 8 & FIX 4: SERVICES (Capabilities & Value Focus) */}
       <section className="bg-white py-12 lg:py-20">

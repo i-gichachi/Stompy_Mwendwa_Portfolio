@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
@@ -9,6 +10,36 @@ import { Bot, TrendingUp, Cloud, ArrowRight, Mail, CheckCircle2, Globe } from 'l
 import Image from 'next/image';
 
 export default function ServicesPage() {
+    const scrollRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    useEffect(() => {
+        const scrollContainer = scrollRef.current;
+        if (!scrollContainer) return;
+
+        let animationFrameId;
+
+        const scroll = () => {
+            if (!isPaused) {
+                // Higher speed on mobile (width < 768px), slower on desktop
+                const isMobile = window.innerWidth < 768;
+                const speed = isMobile ? 1.5 : 0.5; // Increased mobile speed significantly
+
+                scrollContainer.scrollLeft += speed;
+
+                // Reset when we've scrolled past the first set (roughly half content)
+                // We use scrollWidth / 2 as approximation since we duplicated the content
+                if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+                    scrollContainer.scrollLeft = 0;
+                }
+            }
+            animationFrameId = requestAnimationFrame(scroll);
+        };
+
+        animationFrameId = requestAnimationFrame(scroll);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [isPaused]);
 
     // Updated summaries based on User Request
     const updatedServices = [
@@ -28,7 +59,7 @@ export default function ServicesPage() {
         },
         {
             ...services[1],
-            summary: "Generate consistent alpha while protecting downside through AI-driven investment infrastructure. Instant exposure to global assets with volatility-optimized returns, built on cloud architecture managing $2M+ programs and $6M enterprise contracts.",
+            summary: "Generate consistent alpha while protecting downside through AI-driven investment infrastructure. Instant exposure to global assets with volatility-optimized returns, built on cloud architecture managing $2M+ programs and $10M enterprise contracts.",
             trustElement: (
                 <div className="bg-teal-primary/5 border-l-2 border-teal-primary rounded-lg p-3.5 mb-5">
                     <div className="flex items-start gap-3">
@@ -258,7 +289,7 @@ export default function ServicesPage() {
                                 Measurable Impact
                             </h3>
                             <p className="text-base text-gray-700 leading-relaxed">
-                                34% faster incident resolution. 99.9% service availability maintained. $6M in contracts secured through technical excellence. Results-driven infrastructure optimization.
+                                34% faster incident resolution. 99.9% service availability maintained. $10M in contracts secured through technical excellence. Results-driven infrastructure optimization.
                             </p>
                         </div>
 
@@ -355,16 +386,24 @@ export default function ServicesPage() {
                         <div className="w-24 h-1 bg-teal-primary mx-auto"></div>
                     </div>
 
-                    {/* LOGO CAROUSEL */}
+                    {/* Scrolling container */}
                     <div className="relative overflow-hidden">
                         {/* Gradient Fades - narrower on mobile */}
                         <div className="absolute left-0 top-0 bottom-0 w-12 lg:w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
                         <div className="absolute right-0 top-0 bottom-0 w-12 lg:w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
 
-                        {/* Scrolling Track */}
-                        <div className="flex gap-16 animate-scroll hover:[animation-play-state:paused] w-max">
+                        {/* Scrolling track */}
+                        <div
+                            ref={scrollRef}
+                            className="flex gap-16 overflow-x-auto no-scrollbar"
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
+                            onTouchStart={() => setIsPaused(true)}
+                            onTouchEnd={() => setIsPaused(false)}
+                        >
+                            {/* First set of logos */}
                             {logos.map((company, index) => (
-                                <div key={index} className="flex-shrink-0 flex flex-col items-center gap-3 w-32">
+                                <div key={`first-${index}`} className="flex-shrink-0 flex flex-col items-center gap-3 w-32">
                                     <div className="w-24 h-24 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                                         <div className="relative w-full h-full">
                                             <img
@@ -379,6 +418,31 @@ export default function ServicesPage() {
                                     </span>
                                 </div>
                             ))}
+
+                            {/* Second set for seamless loop - using same logos array as it already has 2x duplication in definition, but Homepage does manual map duplication. 
+                               Wait, `logos` in ServicesPage is defined as `[...branding.companies, ...branding.companies]`.
+                               HOMEPAGE does: 
+                               {branding.companies.map...}
+                               {branding.companies.map...}
+                               
+                               In ServicesPage, `logos` ALREADY has double content.
+                               So I should just map `logos` once? 
+                               BUT, the homepage logic `if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2)` depends on having two sets.
+                               If `logos` is already double, mapping it once gives me 2 sets.
+                               So `scrollWidth / 2` will work if I scroll to half.
+                               
+                               However, to be EXACTLY like Homepage, I should see how Homepage does it.
+                               Homepage: 
+                               {branding.companies.map...}
+                               {branding.companies.map...}
+                               
+                               ServicesPage:
+                               const logos = [...branding.companies, ...branding.companies];
+                               {logos.map...}
+                               (This is effectively 2 sets)
+                               
+                               So logic holds.
+                            */}
                         </div>
                     </div>
 

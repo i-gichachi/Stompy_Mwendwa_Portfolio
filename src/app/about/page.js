@@ -39,7 +39,7 @@ export default function About() {
 
                             {/* Summary */}
                             <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                                Senior DevOps Engineer with proven expertise leading platform reliability across global SaaS companies. Reduced incident resolution by 34% at Sourcegraph through automated monitoring systems, secured $6M in enterprise contracts at IQVIA via complex API integrations, and led government cloud migrations maintaining 99.99% uptime. Specialized in Kubernetes orchestration, multi-cloud architecture (AWS/Azure/GCP), and distributed team leadership across three continents.
+                                Senior DevOps Engineer with proven expertise leading platform reliability across global SaaS companies. Reduced incident resolution by 34% at Sourcegraph through automated monitoring systems, secured $10M in enterprise contracts at IQVIA via complex API integrations, and led government cloud migrations maintaining 99.99% uptime. Specialized in Kubernetes orchestration, multi-cloud architecture (AWS/Azure/GCP), and distributed team leadership across three continents.
                             </p>
 
                             {/* Key Highlights Grid */}
