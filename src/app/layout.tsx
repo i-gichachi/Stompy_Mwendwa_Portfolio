@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Stompy (Stomzy) Mwendwa | Professional Portfolio",
-  description: "Senior DevOps & Platform Reliability Engineer - Portfolio",
+  description: "Technical Engineering Lead & AI Engineer - Portfolio of Stompy Mwendwa. Specializing in intelligent automation, cloud infrastructure, and data-driven strategy.",
 };
 
 export default function RootLayout({
