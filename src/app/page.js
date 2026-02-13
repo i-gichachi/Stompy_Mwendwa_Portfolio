@@ -317,20 +317,17 @@ export default function Home() {
       {/* STEP 5: COMPETENCIES (Refined Light Theme) */}
       <section className="relative bg-teal-neutral py-12 lg:py-20 overflow-hidden">
 
-        {/* Subtle dot pattern overlay */}
+        {/* Dot Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
-              backgroundSize: '32px 32px'
-            }}
-          />
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
+            backgroundSize: '32px 32px'
+          }} />
         </div>
 
         <div className="relative max-w-[1400px] mx-auto px-6">
 
-          {/* Section Header - Compact Spacing */}
+          {/* Section Header */}
           <div className="text-center mb-10">
             <p className="text-sm font-semibold text-teal-primary uppercase tracking-wider mb-2">
               MY EXPERTISE
@@ -341,12 +338,13 @@ export default function Home() {
             <div className="w-20 h-1 bg-teal-primary mx-auto"></div>
           </div>
 
-          {/* Competency Cards Grid - Compact Gap */}
+          {/* 3 Pillar Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 
-            {/* Card 1: Infrastructure */}
+            {/* PILLAR 1: Infrastructure & Platform Engineering */}
             <div className="group relative">
               <div className="relative bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+
                 {/* Top accent border */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-primary via-teal-light to-teal-primary rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
@@ -359,7 +357,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-dark mb-3 leading-tight">
-                    Infrastructure & Cloud Architecture
+                    Infrastructure & Platform Engineering
                   </h3>
 
                   <ul className="space-y-2 flex-grow">
@@ -372,7 +370,7 @@ export default function Home() {
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Infrastructure Automation & Operational Efficiency
+                        Container Orchestration & CI/CD Pipeline Engineering
                       </span>
                     </li>
                     <li className="flex items-start gap-2.5">
@@ -386,41 +384,41 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2: Automation */}
+            {/* PILLAR 2: AI & Innovation */}
             <div className="group relative">
               <div className="relative bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-primary via-teal-light to-teal-primary rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Icon */}
                   <div className="w-14 h-14 mb-5 bg-teal-primary/5 rounded-lg flex items-center justify-center group-hover:bg-teal-primary/10 transition-colors">
                     <svg className="w-7 h-7 text-teal-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-dark mb-3 leading-tight">
-                    Automation & Reliability
+                    AI & Innovation
                   </h3>
 
                   <ul className="space-y-2 flex-grow">
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Container Orchestration & CI/CD Pipeline Engineering
+                        Agentic AI & Intelligent Automation
                       </span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Incident Response & Platform Reliability Engineering
+                        Strategic Growth & Enterprise Customer Success
                       </span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Data-Driven Decision Making & System Observability
+                        Quantitative Strategy & Fund Management
                       </span>
                     </li>
                   </ul>
@@ -428,9 +426,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3: Leadership */}
+            {/* PILLAR 3: Reliability & Leadership */}
             <div className="group relative">
               <div className="relative bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-primary via-teal-light to-teal-primary rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 <div className="relative z-10 flex flex-col h-full">
@@ -442,7 +441,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-dark mb-3 leading-tight">
-                    Leadership & Collaboration
+                    Reliability & Leadership
                   </h3>
 
                   <ul className="space-y-2 flex-grow">
@@ -455,13 +454,13 @@ export default function Home() {
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Enterprise SaaS Integration & Technical Client Success
+                        Incident Response & Platform Reliability Engineering
                       </span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-teal-primary mt-1.5 flex-shrink-0 text-xs">●</span>
                       <span className="text-[15px] text-gray-600 leading-relaxed">
-                        Agile Product Development & Technical Program Management
+                        Enterprise SaaS Integration & Technical Client Success
                       </span>
                     </li>
                   </ul>

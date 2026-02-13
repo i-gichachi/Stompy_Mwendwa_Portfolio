@@ -26,8 +26,8 @@ export const competencies = [
     },
     {
         id: 6,
-        title: "Infrastructure Automation & Operational Efficiency",
-        description: `Building automation frameworks that eliminate manual toil and accelerate operational velocity has been a consistent thread throughout my career. At IQVIA, Python-based automation scripts processed over 1M records, boosting internal data processing efficiency by 54% compared to manual methods. This automation work extends to creating deployment workflows that increased release frequency for technical data products and implementing agile methodologies that accelerated delivery timelines, enabling teams to ship faster without sacrificing quality or reliability.`
+        title: "Agentic AI & Intelligent Automation",
+        description: `Designing the infrastructure for the next generation of intelligence. Architecting LLM-driven workflows and agentic frameworks transforming raw operational data into autonomous systems that eliminate manual toil at scale. By leveraging Python-based automation and AI-powered tooling, I processed over 1M records with a 54% boost in efficiency, ensuring that complex AI initiatives ship with the absolute reliability and speed required for enterprise-grade environments.`
     },
     {
         id: 7,
@@ -36,12 +36,12 @@ export const competencies = [
     },
     {
         id: 8,
-        title: "Data-Driven Decision Making & System Observability",
-        description: `Implementing monitoring and analytics frameworks transforms raw system data into actionable insights for infrastructure optimization. At Sourcegraph, deploying enhanced Prometheus-based monitoring systems enabled proactive issue detection and faster root cause identification across Kubernetes-based enterprise environments. The focus on system observability involves building comprehensive logging and metrics collection pipelines using Grafana & Sentry that provide real-time visibility into platform health, enabling data-driven capacity planning and performance optimization decisions that actually matter.`
+        title: "Strategic Growth & Enterprise Customer Success",
+        description: `Scaling a brand-new business line from the ground up. Taking ownership of a nascent business segment with $0 in revenue and scaled it to $6M in ACV within two years by leading complex technical onboarding and high-stakes partnerships. This role involved deploying proactive health monitoring that successfully reduced churn from 8% to under 3%, while maintaining the commercial maturity to walk away from unsustainable partnerships to ensure long-term profitability and service excellence.`
     },
     {
         id: 9,
-        title: "Agile Product Development & Technical Program Management",
-        description: `Driving technical initiatives from concept through delivery using agile methodologies balances speed with quality in ways that matter for distributed teams. At IQVIA, introducing agile development methodologies and sprint cycles accelerated product delivery timelines for key platform features while facilitating remote product requirement workshops with stakeholders across four African markets to align development priorities with local market needs. This program management approach resulted in launching enterprise data platforms that achieved a 77% adoption rate during initial rollout, demonstrating ability to deliver complex technical products that users actually adopt and use.`
+        title: "Quantitative Strategy & Fund Management",
+        description: `Applying a high-level engineering mindset to private markets allows for a level of precision and transparency often missing in traditional finance. Currently managing a private investment fund that leverages AI data-driven decision-making and algorithmic risk management to consistently outperform benchmarks. By treating fund management as an engineering challenge focusing on quantitative analysis and rigorous capital preservation.`
     }
 ];

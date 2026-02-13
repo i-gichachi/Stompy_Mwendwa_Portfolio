@@ -1,6 +1,6 @@
 export const branding = {
     name: "Stompy Mwendwa",
-    roleTitle: "Engineering Manager & Senior DevOps/SRE Engineer",
+    roleTitle: "Technical Engineering Lead & AI Engineer",
     profileImage: "/images/hero-profile.jpg",
     tagline: "Architecting resilient cloud infrastructure for global enterprise platforms",
     contact: {

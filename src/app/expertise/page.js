@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
     Cloud, Settings, Users, AlertTriangle, Link2,
-    Cpu, MessageSquare, BarChart3, Zap
+    Cpu, MessageSquare, BarChart3, Zap,
+    Bot, TrendingUp, PieChart
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -19,10 +20,10 @@ export default function Expertise() {
         Users,           // 3: Team Leadership
         AlertTriangle,   // 4: Incident Response
         Link2,           // 5: Enterprise SaaS
-        Cpu,             // 6: Infrastructure Automation
+        Bot,             // 6: Agentic AI (CHANGED from Cpu)
         MessageSquare,   // 7: Stakeholder Management
-        BarChart3,       // 8: Data-Driven Decision Making
-        Zap              // 9: Agile Product Development
+        TrendingUp,      // 8: Strategic Growth (CHANGED from BarChart3)
+        PieChart         // 9: Fund Management (CHANGED from Zap)
     ];
 
     // Key achievements mapped by competency index (0-8) to match competencies array
@@ -57,11 +58,11 @@ export default function Expertise() {
             "Customer churn decreased from 8% to under 3%",
             "20+ enterprise clients across EMEA successfully integrated"
         ],
-        // Competency 6: Infrastructure Automation
+        // Competency 6: Agentic AI
         [
-            "1M+ records processed via Python automation",
-            "54% improvement in data processing efficiency",
-            "Agile methodologies accelerated delivery timelines"
+            "1M+ records processed via AI-driven automation",
+            "54% improvement in operational velocity",
+            "LLM-driven workflows scaled for enterprise-level usage"
         ],
         // Competency 7: Stakeholder Management
         [
@@ -69,17 +70,17 @@ export default function Expertise() {
             "Multi-stakeholder coordination across government departments",
             "Critical integration issues resolved across distributed teams"
         ],
-        // Competency 8: Data-Driven Decision Making
+        // Competency 8: Strategic Growth
         [
-            "Enhanced Prometheus monitoring systems deployed",
-            "Real-time platform health visibility established",
-            "Comprehensive logging pipelines using Grafana & Sentry"
+            "$6M ACV grown from a brand-new $0 business line",
+            "62.5% reduction in enterprise churn (from 8% to <3%)",
+            "33% revenue growth driven through technical success frameworks"
         ],
-        // Competency 9: Agile Product Development
+        // Competency 9: Fund Management
         [
-            "77% adoption rate achieved during platform rollout",
-            "Sprint cycles accelerated delivery timelines",
-            "Remote workshops conducted across four African markets"
+            "31% annual returns achieved through data-driven strategy",
+            "Algorithmic risk management for capital preservation",
+            "Quantitative frameworks applied to private market assets"
         ]
     ];
 

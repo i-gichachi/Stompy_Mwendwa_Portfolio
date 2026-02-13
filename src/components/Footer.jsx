@@ -31,7 +31,7 @@ export default function Footer() {
                             Stompy Mwendwa
                         </h3>
                         <p className="text-white/70 mb-8 leading-relaxed max-w-md text-[15px]">
-                            Senior DevOps & Platform Reliability Engineer helping organizations build resilient, scalable cloud infrastructure that drives business value.
+                            Technical Engineering Lead & AI Engineer helping organizations scale through intelligent automation, cloud infrastructure, and data-driven strategy.
                         </p>
 
                         <div className="flex flex-col gap-4 items-start">
