@@ -13,7 +13,7 @@ export default function Navigation() {
 
                 {/* Logo */}
                 <Link href="/" className="text-xl font-bold text-gray-dark uppercase tracking-wide">
-                    {branding.name || "STOMPY MWENDWA"}
+                    Stompy Mwendwa
                 </Link>
 
                 {/* Desktop Nav */}

@@ -1,6 +1,6 @@
-'use client';
 import Link from 'next/link';
 import { Mail, Linkedin, ArrowRight, MapPin } from 'lucide-react';
+import { branding } from '@/data/branding';
 
 export default function Footer() {
     return (
@@ -28,7 +28,7 @@ export default function Footer() {
                     {/* COLUMN 1: BRANDING & CTA (Span 5) */}
                     <div className="lg:col-span-5">
                         <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">
-                            Stompy Mwendwa
+                            {branding.name}
                         </h3>
                         <p className="text-white/70 mb-8 leading-relaxed max-w-md text-[15px]">
                             Technical Engineering Lead & AI Engineer helping organizations scale through intelligent automation, cloud infrastructure, and data-driven strategy.
@@ -112,7 +112,7 @@ export default function Footer() {
                 {/* DIVIDER & COPYRIGHT */}
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-white/40">
-                        © {new Date().getFullYear()} Stompy Mwendwa. All rights reserved.
+                        © {new Date().getFullYear()} Stompy (Stomzy) Mwendwa. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <p className="flex items-center gap-2 text-sm text-white/40">

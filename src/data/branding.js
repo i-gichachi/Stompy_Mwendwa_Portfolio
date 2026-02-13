@@ -1,5 +1,6 @@
 export const branding = {
-    name: "Stompy Mwendwa",
+    name: "Stompy (Stomzy) Mwendwa",
+    navName: "Stompy Mwendwa",
     roleTitle: "Technical Engineering Lead & AI Engineer",
     profileImage: "/images/hero-profile.jpg",
     tagline: "Architecting resilient cloud infrastructure for global enterprise platforms",

@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stompy Mwendwa | Professional Portfolio",
+  title: "Stompy (Stomzy) Mwendwa | Professional Portfolio",
   description: "Senior DevOps & Platform Reliability Engineer - Portfolio",
 };
 
